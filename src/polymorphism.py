@@ -8,3 +8,8 @@ class CreditCard(PaymentBase):
     def process_payment(self):
         msg = f"Credit card payment for {self.amount}: succesfull"
         return msg
+
+class PayPal(PaymentBase):
+    def process_payment(self):
+        msg = f"Paypal payment for {self.amount}: succesfull"
+        return msg
