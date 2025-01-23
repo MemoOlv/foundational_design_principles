@@ -5,3 +5,7 @@ class PaymentBase:
         self.amount: int = amount
     def process_payment(self):
         pass
+
+class CreditCard(PaymentBase):
+    def process_payment(self):
+        pass
