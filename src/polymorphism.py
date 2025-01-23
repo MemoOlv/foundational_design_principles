@@ -8,4 +8,5 @@ class PaymentBase:
 
 class CreditCard(PaymentBase):
     def process_payment(self):
-        pass
+        msg = f"Credit card payment for {self.amount}: succesfull"
+        return msg
