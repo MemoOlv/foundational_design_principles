@@ -1,4 +1,4 @@
-from src.polymorphism import CreditCard, Paypal
+from src.polymorphism import CreditCard, PayPal
 
 def test_payment_methods():
     amount_to_pay = 100
