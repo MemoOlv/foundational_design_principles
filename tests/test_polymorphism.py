@@ -14,3 +14,7 @@ def test_circle_class():
     radius = 15
     obtained = Circle(radius)
     assert obtained.radius == radius
+
+    new_radius = 17
+    obtained.radius = new_radius
+    assert obtained.radius == new_radius
