@@ -25,4 +25,6 @@ class Circle():
     
     @radius.setter
     def radius(self, value: int):
+        if value < 0:
+            raise ValueError("Radius cannot be negative!")
         self._radius = value
