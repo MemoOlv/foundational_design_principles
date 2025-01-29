@@ -1,4 +1,4 @@
-from src.polymorphism import CreditCard, PayPal
+from src.polymorphism import CreditCard, PayPal, Circle
 
 def test_payment_methods():
     amount_to_pay = 100
@@ -10,3 +10,6 @@ def test_payment_methods():
     obtained = paypal_payment.process_payment()
     assert obtained == "Paypal payment for 100: succesfull"
 
+def test_circle_class():
+    radius = 15
+    obtained = Circle(radius)
