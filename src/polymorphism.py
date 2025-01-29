@@ -17,4 +17,8 @@ class PayPal(PaymentBase):
 
 class Circle():
     def __init__(self, radius: int):
-        self.__radius: int = radius
+        self._radius: int = radius
+
+    @property
+    def radius(self):
+        return self._radius
