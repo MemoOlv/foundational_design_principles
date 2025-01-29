@@ -1,3 +1,5 @@
+from pytest import raises
+
 from src.polymorphism import CreditCard, PayPal, Circle
 
 def test_payment_methods():
@@ -18,3 +20,7 @@ def test_circle_class():
     new_radius = 17
     obtained.radius = new_radius
     assert obtained.radius == new_radius
+
+    wrong_radius = -8
+    with raises(ValueError, match="Radius cannot be negative!"):
+        obtained.radius = wrong_radius
