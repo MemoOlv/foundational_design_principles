@@ -13,3 +13,4 @@ def test_payment_methods():
 def test_circle_class():
     radius = 15
     obtained = Circle(radius)
+    assert obtained.radius == radius
