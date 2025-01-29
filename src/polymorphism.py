@@ -22,3 +22,7 @@ class Circle():
     @property
     def radius(self):
         return self._radius
+    
+    @radius.setter
+    def radius(self, value: int):
+        self._radius = value
