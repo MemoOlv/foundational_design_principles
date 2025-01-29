@@ -13,3 +13,8 @@ class PayPal(PaymentBase):
     def process_payment(self):
         msg = f"Paypal payment for {self.amount}: succesfull"
         return msg
+
+
+class Circle():
+    def __init__(self, radius: int):
+        self.__radius: int = radius
