@@ -3,7 +3,8 @@ class Car:
         self.engine = Engine()
 
     def start(self):
-        return self.engine.start()
+        if self.engine.start():
+            return "Car started"
 
 
 class Plane:
@@ -11,9 +12,11 @@ class Plane:
         self.engine = Engine()
 
     def start(self):
-        return self.engine.start()
+        if self.engine.start():
+            return "Plane started"
 
 
 class Engine:
     def start(self):
-        return "Engine started"
+        print("Engine started")
+        return True
