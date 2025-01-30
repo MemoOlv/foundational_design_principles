@@ -3,4 +3,4 @@ class Car:
         pass
 
     def start(self):
-        pass
+        return "Engine started"
