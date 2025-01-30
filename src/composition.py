@@ -1,17 +1,16 @@
 class Car:
     def __init__(self):
-        pass
+        self.engine = Engine()
 
     def start(self):
-        return "Engine started"
+        return self.engine.start()
 
 class Plane:
     def __init__(self):
-        pass
+        self.engine = Engine()
 
     def start(self):
-        return "Engine started"
-    
+        return self.engine.start()
 
 class Engine:
     def start(self):
