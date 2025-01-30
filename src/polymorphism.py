@@ -1,13 +1,16 @@
 class PaymentBase:
     def __init__(self, amount: int):
         self.amount: int = amount
+
     def process_payment(self):
         pass
+
 
 class CreditCard(PaymentBase):
     def process_payment(self):
         msg = f"Credit card payment for {self.amount}: succesfull"
         return msg
+
 
 class PayPal(PaymentBase):
     def process_payment(self):
@@ -15,14 +18,14 @@ class PayPal(PaymentBase):
         return msg
 
 
-class Circle():
+class Circle:
     def __init__(self, radius: int):
         self._radius: int = radius
 
     @property
     def radius(self):
         return self._radius
-    
+
     @radius.setter
     def radius(self, value: int):
         if value < 0:
