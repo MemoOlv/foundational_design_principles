@@ -4,6 +4,7 @@ all: check tests
 		all \
 		clean \
 		check \
+		format \
 		tests
 
 clean:
@@ -13,6 +14,11 @@ clean:
 
 check:
 	black --check --line-length 100 src
+	black --check --line-length 100 tests
+
+format:
+	black --line-length 100 src
+	black --line-length 100 tests
 
 tests:
 	pytest --verbose
