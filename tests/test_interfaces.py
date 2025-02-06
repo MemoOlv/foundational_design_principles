@@ -1,4 +1,4 @@
-from src.interfaces import MyClass, ConsoleLogger
+from src.interfaces import MyClass, ConsoleLogger, log_message
 
 def test_class_as_interface():
     myclass = MyClass()
@@ -9,4 +9,7 @@ def test_class_as_interface():
 
 
 def test_loggers():
-    ConsoleLogger()
+    console_log_message = "A console log"
+    console_logger = ConsoleLogger()
+    obatined_console_logger = log_message(console_logger, console_log_message)
+    assert obatined_console_logger == "Console: A console log"
