@@ -1,4 +1,4 @@
-from src.interfaces import MyClass, ConsoleLogger, log_message
+from src.interfaces import MyClass, ConsoleLogger, log_message, FileLogger
 
 def test_class_as_interface():
     myclass = MyClass()
@@ -13,3 +13,8 @@ def test_loggers():
     console_logger = ConsoleLogger()
     obatined_console_logger = log_message(console_logger, console_log_message)
     assert obatined_console_logger == "Console: A console log"
+
+    file_logger_message = "A file log"
+    file_logger = FileLogger()
+    obtained_file_logger = log_message(file_logger, file_logger_message)
+    assert obtained_file_logger == "File: A file log"
