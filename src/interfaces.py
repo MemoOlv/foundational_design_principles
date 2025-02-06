@@ -10,3 +10,7 @@ class MyInterface(ABC):
 class MyClass(MyInterface):
     def do_something(self, param: str):
         return f"Doing something with: {param}"
+
+
+class ConsoleLogger:
+    pass
