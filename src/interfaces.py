@@ -12,5 +12,15 @@ class MyClass(MyInterface):
         return f"Doing something with: {param}"
 
 
-class ConsoleLogger:
-    pass
+class Logger(ABC):
+    @abstractmethod
+    def log(self, message: str):
+        pass
+
+class ConsoleLogger(Logger):
+    def log(self, message: str):
+        return f"Console: {message}"
+
+
+def log_message(logger: Logger, message: str):
+    return logger.log(message)
