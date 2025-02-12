@@ -18,9 +18,11 @@ class Logger(ABC):
     def log(self, message: str):
         pass
 
+
 class ConsoleLogger(Logger):
     def log(self, message: str):
         return f"Console: {message}"
+
 
 class FileLogger(Logger):
     def __init__(self, file_path: str):
@@ -31,6 +33,7 @@ class FileLogger(Logger):
             self.file.touch()
         self.file.write_text(f"File: {message}")
         return self.file.read_text()
+
 
 def log_message(logger: Logger, message: str):
     return logger.log(message)

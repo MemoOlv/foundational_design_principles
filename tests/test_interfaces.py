@@ -2,6 +2,7 @@ import pathlib
 
 from src.interfaces import MyClass, ConsoleLogger, log_message, FileLogger
 
+
 def test_class_as_interface():
     myclass = MyClass()
     parameters = "a"
