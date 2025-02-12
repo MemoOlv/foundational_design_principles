@@ -15,6 +15,7 @@ clean:
 check:
 	black --check --line-length 100 src
 	black --check --line-length 100 tests
+	mypy src/*.py
 
 format:
 	black --line-length 100 src

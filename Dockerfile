@@ -4,5 +4,5 @@ COPY . .
 
 RUN pip install --upgrade pip && pip install \
     black \
+    mypy \
     pytest
-
