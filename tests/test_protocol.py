@@ -19,3 +19,6 @@ def test_loggers():
     file_logger = FileLogger(file_log_path)
     obtained_file_logger = log_message(file_logger, file_logger_message)
     assert obtained_file_logger == "File protocol: A file log"
+
+    if file.exists():
+        file.unlink()
