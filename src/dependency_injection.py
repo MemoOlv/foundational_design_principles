@@ -6,4 +6,4 @@ class MessageService:
 
 class EmailSender:
     def send(self, message: str):
-        return message
+        return f"Sending mail: {message}"
